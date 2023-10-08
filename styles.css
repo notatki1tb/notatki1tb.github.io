@@ -12,10 +12,18 @@ a {
 }
 
 p {
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: "Courier";
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 4vw;
+        font-family: "Courier";
+        text-align: center;
+    }
+  }
 
 .category {
     margin-top: 20px;

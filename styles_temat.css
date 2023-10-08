@@ -17,6 +17,14 @@ p {
     text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 4vw;
+        font-family: "Courier";
+        text-align: center;
+    }
+  }
+  
 h1 {
     font-size: 50px;
     text-decoration: underline;
