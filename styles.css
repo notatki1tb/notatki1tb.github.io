@@ -16,15 +16,7 @@ p {
     font-family: "Courier";
     text-align: center;
 }
-
-@media only screen and (max-width: 600px) {
-    p {
-        font-size: 4vw;
-        font-family: "Courier";
-        text-align: center;
-    }
-  }
-
+  
 .category {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -32,12 +24,13 @@ p {
     margin-right: 70px;
     padding: 60px;
     background-color: #7E7F83;
+    border-radius: 15px;
     transition-duration: 1s;
+    
 }
 
 .category:hover {
-    background-color: #F3F3F4;
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
 
 .menu {
@@ -55,9 +48,10 @@ p {
 
 .button {
     background-color: #F3F3F4;
-    padding: 5px;
+    padding: 9px;
     border: solid 1px black;
     transition-duration: 0.5s;
+    border-radius: 40px;
 }
 
 .button:hover {
