@@ -15,10 +15,10 @@ src:url(Montserrat-Regular.ttf);
     box-sizing: border-box;
     color: white;
 }
-body{
+body {
     font-family: Montserrat;
     height: calc(100vh - 80px);
-    background: url(tlo.gif) no-repeat;
+    background: linear-gradient(45deg, #ff6a00, #ff0000);
     background-size: cover;
 }
 
@@ -71,7 +71,7 @@ a.active,a:hover{
 #check{
     display: none;
 }
-@media (max-width: 952px){
+@media (max-width: 1200px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
@@ -80,7 +80,7 @@ a.active,a:hover{
         font-size:16px;
     }
 }
-@media (max-width: 858px){
+@media (max-width: 1000px){
     .checkbtn{
         display: block;
     }
@@ -116,10 +116,22 @@ a.active,a:hover{
 
 /* Stopka */
 footer {
-    position:static;
-    bottom: 0;
+    position: absolute;
+    bottom: 0px;
     width: 100%;
     background: #292a2b;
+    float: inline-end;
+    margin-top: 1%;
+}
+@media (max-width: 952px) {
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background: #292a2b;
+        float: inline-end;
+        margin-top: 1%;
+    }
 }
 .stopka {
     width:100%;
@@ -167,11 +179,6 @@ footer {
     color:#1a1a1a;
 }
 /* KONIEC ATRYBUTÓW DOT. STOPKI */
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 /* Zegar */
 
 .container {
@@ -250,4 +257,5 @@ video {
     position: relative;
     border-radius: 20px;
     top: 220px;
+    z-index: -1;
 }
