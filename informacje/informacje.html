@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacje</title>
+    <link rel="stylesheet" href="informacje.css" style type="text/css">
+    <!-- Grafika Znaczka rozwijającego menu -->
+    <script src="https://kit.fontawesome.com/1d74b2e3e3.js" crossorigin="anonymous"></script>
+    <!-- Grafika twittera/youtube/facebook/instagram -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Grafika strzałki w lewo -->
+    <script src="https://kit.fontawesome.com/ef3bea7f3a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <!-- Podstrony -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="logo">Notatki1tb</label>
+        <ul>
+          <li><a class="active" href="../glowna/glowna.html">Główna</a></li>
+          <li><a href="../notatki/notatki.html">Notatki</a></li>
+          <li><a href="../zadania/zadania.html">Zadania</a></li>
+          <li><a href="../zdrowie/zdrowie.html">Zdrowie</a></li>
+          <li><a href="../informacje/informacje.html">Informacje</a></li>
+      </ul>
+    </nav>
+    <!-- Główne body ciała - str główna -->
+    <!-- Pogoda -->
+    <div class="wrapper">
+        <header><i class="fa-solid fa-arrow-left"></i>Aktualna Pogoda</header>
+        <section class="input-part">
+          <p class="info-txt">Wprowadź prawidłową nazwę miasta</p>
+          <div class="content">
+            <input type="text" spellcheck="false" placeholder="Wprowadź nazwę miasta" required>
+            <div class="separator"></div>
+            <button>Udostępnij lokalizację</button>
+          </div>
+        </section>
+        <section class="weather-part">
+          <img src="ikony/cloud.svg" alt="Weather Icon">
+          <div class="temp">
+            <span class="numb">_</span>
+            <span class="deg">°</span>C
+          </div>
+          <div class="location">
+            <i class="fas fa-location"></i>
+            <span>_, _</span>
+          </div>
+          <div class="bottom-details">
+            <div class="column feels">
+                <i class="fas fa-thermometer-half"></i>
+              <div class="details">
+                <div class="temp">
+                  <span class="numb-2">_</span>
+                  <span class="deg">°</span>C
+                </div>
+                <p>Odczuwalna</p>
+              </div>
+            </div>
+            <div class="column humidity">
+                <i class="fa-solid fa-droplet"></i>
+              <div class="details">
+                <span>_</span>
+                <p>Wilgotność</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script src="pogoda.js"></script>
+    <!-- Koniec Pogody -->
+    <!-- Karteczki -->
+    <div class="popup-box">
+        <div class="popup">
+          <div class="content">
+            <header>
+              <p></p>
+              <i class="uil uil-times"></i>
+            </header>
+            <form action="#">
+              <div class="row title">
+                <label>Tytuł</label>
+                <input type="text" spellcheck="false">
+              </div>
+              <div class="row description">
+                <label>Treść</label>
+                <textarea spellcheck="false"></textarea>
+              </div>
+              <button></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="tlo">
+        <li class="add-box">
+          <div class="icon"><i class="uil uil-plus"></i></div>
+          <p>Utwórz Notatkę</p>
+        </li>
+      </div>
+      <script src="karteczki.js"></script>
+      <!-- Koniec kartek -->
+      <!-- Stopka -->
+    <footer>
+    <div class="stopka">
+        <div class="social">
+            <a href="https://www.facebook.com/ekonomikopole"><span class="fab fa-facebook-f"></span></a>
+                <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+                <a href="https://www.instagram.com/ekonomikopole/"><span class="fab fa-instagram"></span></a>
+                <a href="https://www.youtube.com/@ZSEkOpole/featured"><span class="fab fa-youtube"></span></a>
+                <a href="https://www.tiktok.com/@imo__o"><span class="fab fa-tiktok"></span></a>
+        </div>
+    </div>
+        <div class="autorzy">
+           <p>Wojciech Bruchal | Bruno Szewczyk | Sebastian Kuliński</p>
+        </div>
+    <div class="dolnastopka">
+        <p>Designed by <span class="designer">CentreBit</span> | 2023</p>
+    </div>
+    </footer>
+</body>
+</html>

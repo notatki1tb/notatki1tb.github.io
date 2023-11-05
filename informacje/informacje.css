@@ -1,0 +1,631 @@
+/* Custom Czcionka */
+@font-face
+{
+font-family: Montserrat;
+
+src:url(Montserrat-Regular.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Montserrat;
+    background: linear-gradient(45deg, #f5a142, #e042f5);
+    height: calc(100vh - 80px);
+}
+@media (max-width: 1000px){
+    body{
+        height: calc(350vh - 80px);
+    }
+}
+/* Tło paska menu */
+nav{
+    background: #292a2b;
+    height: 80px;
+    width: 100%;
+}
+/* Atrybuty Loga Zespołu */
+label.logo{
+    color:#8eb8fa;
+    font-size:45px;
+    line-height:80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+/* Atrybuty przycisków Nawigacyjnych */
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.514) 1px 1px 1px;
+}
+/* Definicja przycisku głównego */
+a.active,a:hover{
+    background: #8eb8fa;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 1200px){
+    label.logo{
+        font-size: 25px;
+        padding-left: 40px;
+    }
+    nav ul li a{
+        font-size:16px;
+    }
+}
+@media (max-width: 1000px){
+    .checkbtn{
+        display: block;
+    }
+    /* Definicja koloru tła po rozwinięciu menu */
+    ul{
+        position: absolute;
+        width: 100%;
+        height: 350vh;
+        background: #47515c;
+        top: 80px;
+        left: -100%;
+        text-align:center;
+        transition: all .5s;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block; 
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #8eb8fa;
+        
+    }
+    #check:checked ~ ul{
+        left: 0; 
+    }
+}
+/* KONIEC ATRYBUTÓW PASKA MENU */
+
+/* Stopka */
+footer {
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    background: #292a2b;
+    z-index: 2;
+}
+@media (max-width: 1000px){
+    footer {
+        position:fixed;
+        bottom: 0px;
+        width: 100%;
+        background: #292a2b;
+        float:inline-end;
+        margin-top: 1%;
+    }
+}
+.stopka {
+    width:100%;
+    padding: 5px 5px 5px;
+} 
+/* Przyciski social mediów */
+.social {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+}
+.social a{
+    padding: 0 2px;
+}
+.social a span{
+    height: 50px;
+    width: 50px;
+    background: #1a1a1a;
+    line-height: 50px;
+    text-align: center;
+    font-size: 27px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: white;
+}
+/* Twórcy */
+.autorzy {
+    margin: 10px 0;
+    text-align: center;
+    font-size:15px;
+    line-height:20px;
+    font-weight: bold;
+}
+.autorzy p {
+    color: white;
+}
+/* Team */
+.dolnastopka {
+    background-color:#8eb8fa;
+    padding: 10px;
+    text-align:center;
+}
+.dolnastopka p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight:700;
+    margin: 0px 4px;
+    color:#1a1a1a;
+}
+/* KONIEC ATRYBUTÓW DOT. STOPKI */
+/* POGODA */
+::selection{
+  color: #fff;
+  background: #43AFFC;
+  display: block;
+  justify-content: center;
+}
+.wrapper{
+    width: 300px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    margin-top: 50px;
+    float: right;
+  }
+@media (max-width: 1000px){
+    .wrapper{
+        width: 350px;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+        position: absolute;
+        margin-top: 20px;
+        left: 3%;
+      }
+}
+  .wrapper header{
+    display: flex;
+    font-size: 21px;
+    font-weight: 600;
+    color: #8eb8fa;
+    padding: 16px 15px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  header i{
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 8px;
+    color: #8eb8fa;
+  }
+  .wrapper.active header i{
+    margin-left: 5px;
+    font-size: 30px;
+  }
+  .wrapper .input-part{
+    margin: 20px 25px 30px;
+  }
+  .wrapper.active .input-part{
+    display: none;
+  }
+  .input-part .info-txt{
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+  }
+  .input-part .info-txt.error{
+    color: #721c24;
+    display: block;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  .input-part .info-txt.pending{
+    color: #0c5460;
+    display: block;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+  }
+  .input-part :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+    color: black;
+  }
+  .input-part input{
+    text-align: center;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+  }
+  .input-part input:is(:focus, :valid){
+    border: 2px solid #43AFFC;
+  }
+  .input-part input::placeholder{
+    color: #bfbfbf;
+  }
+  .input-part .separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #ccc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .separator::before{
+    content: "albo";
+    color: #b3b3b3;
+    font-size: 19px;
+    padding: 0 15px;
+    background: #fff;
+  }
+  .input-part button{
+    color: #fff;
+    cursor: pointer;
+    background: #8eb8fa;
+    transition: 0.3s ease;
+  }
+  .input-part button:hover{
+    background: #1d9ffc;
+  }
+  .wrapper .weather-part{
+    display: none;
+    margin: 30px 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .wrapper.active .weather-part{
+    display: flex;
+  }
+  .weather-part img{
+    max-width: 125px;
+  }
+  .weather-part .temp{
+    display: flex;
+    font-weight: 500;
+    font-size: 72px;
+  }
+  .weather-part .temp .numb{
+    font-weight: 600;
+  }
+  .weather-part .temp .deg{
+    font-size: 40px;
+    display: block;
+    margin: 10px 5px 0 0;
+  }
+  .weather-part .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+  }
+  .weather-part .location{
+    display: flex;
+    font-size: 19px;
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    align-items: flex-start;
+  }
+  .location i{
+    font-size: 22px;
+    margin: 2px 5px 0 0;
+  }
+  .weather-part .bottom-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+  }
+  .bottom-details .column{
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .column i{
+    color: #5DBBFF;
+    font-size: 40px;
+  }
+  .column.humidity{
+    border-left: 1px solid #ccc;
+  }
+  .column .details{
+    margin-left: 3px;
+  }
+  .details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+  }
+  .details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+  }
+  .column .details p{
+    font-size: 14px;
+    margin-top: -6px;
+  }
+  .humidity i{
+    font-size: 37px;
+  }
+/* Karteczki */
+/* Tło kartek */
+.tlo{
+    margin: 50px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, 265px);
+
+  }
+  .tlo li{
+    height: 250px;
+    list-style: none;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  .add-box, .icon, .bottom-content, 
+  .popup, header, .settings .menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .add-box{
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* Znaczek do tworzenia notatki */
+  .add-box .icon{
+    height: 78px;
+    width: 78px;
+    color: #8eb8fa;
+    font-size: 40px;
+    border-radius: 50%;
+    justify-content: center;
+    border: 2px dashed #88ABFF;
+  }
+  .add-box p{
+    color: #88ABFF;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  .note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .note .details{
+    max-height: 165px;
+    overflow-y: auto;
+  }
+  .note .details::-webkit-scrollbar,
+  .popup textarea::-webkit-scrollbar{
+    width: 0;
+  }
+  .note .details:hover::-webkit-scrollbar,
+  .popup textarea:hover::-webkit-scrollbar{
+    width: 5px;
+  }
+  .note .details:hover::-webkit-scrollbar-track,
+  .popup textarea:hover::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+  }
+  .note .details:hover::-webkit-scrollbar-thumb,
+  .popup textarea:hover::-webkit-scrollbar-thumb{
+    background: #e6e6e6;
+    border-radius: 25px;
+  }
+  .note p{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  /* Tekst Notatki */
+  .note span{
+    display: block;
+    color: #575757;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .note .bottom-content{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+  }
+ /* Data */
+  .bottom-content span{
+    color: #6D6D6D;
+    font-size: 15px;
+  }
+  .bottom-content .settings{
+    position: relative;
+  }
+  /* Ustawienia */
+  .bottom-content .settings i{
+    color: #6D6D6D;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .settings .menu{
+    z-index: 1;
+    bottom: 0;
+    right: -5px;
+    padding: 5px 0;
+    background: #fff;
+    position: absolute;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+    width: 100px;
+    height: 80px;
+  }
+  .settings.show .menu{
+    transform: scale(1);
+  }
+  .settings .menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0;
+    justify-content: flex-start;
+  }
+  .menu li:last-child{
+    margin-bottom: 0;
+  }
+  .menu li:hover{
+    background: #f5f5f5;
+  }
+  .menu li i{
+    padding-right: 8px;
+  }
+  .popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+  }
+  .popup-box .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  .popup-box, .popup{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+  .popup-box.show, .popup-box.show .popup{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .popup-box.show .popup{
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .popup .content{
+    border-radius: 5px;
+    background: #fff;
+    width: calc(100% - 15px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  .content header{
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+  }
+  .content header p{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .content header i{
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 23px;
+  }
+  .content form{
+    margin: 15px 25px 35px;
+  }
+  .content form .row{
+    margin-bottom: 20px;
+  }
+  form .row label{
+    font-size: 18px;
+    display: block;
+    margin-bottom: 6px;
+  }
+  form :where(input, textarea){
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #999;
+  }
+  form :where(input, textarea):focus{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.11);
+  }
+  form .row textarea{
+    height: 150px;
+    resize: none;
+    padding: 8px 15px;
+  }
+  form button{
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 4px;
+    background: #6A93F8;
+  }
+  @media (max-width: 1000px){
+    .tlo{
+      margin: 15px;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fill, 100%);
+      margin-top: 470px;
+      width: 350px;
+    }
+    .popup-box .popup{
+      max-width: calc(100% - 15px);
+    }
+    .bottom-content .settings i{
+      font-size: 17px;
+    }
+  }
