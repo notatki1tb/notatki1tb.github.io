@@ -17,6 +17,8 @@ src:url(Montserrat-Regular.ttf);
 }
 body{
     font-family: Montserrat;
+    background: linear-gradient(45deg, #FFD800, #00AEFF);
+    height: calc(100vh - 80px);
 }
 /* Tło paska menu */
 nav{
@@ -67,22 +69,22 @@ a.active,a:hover{
 #check{
     display: none;
 }
-@media (max-width: 952px){
+@media (max-width: 1200px){
     label.logo{
-        font-size: 30px;
-        padding-left: 50px;
+        font-size: 25px;
+        padding-left: 40px;
     }
     nav ul li a{
         font-size:16px;
     }
 }
-@media (max-width: 858px){
+@media (max-width: 1000px){
     .checkbtn{
         display: block;
     }
     /* Definicja koloru tła po rozwinięciu menu */
     ul{
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100vh;
         background: #47515c;
@@ -90,6 +92,7 @@ a.active,a:hover{
         left: -100%;
         text-align:center;
         transition: all .5s;
+        z-index: 2;
     }
     nav ul li{
         display: block; 
@@ -98,6 +101,7 @@ a.active,a:hover{
     }
     nav ul li a{
         font-size: 20px;
+        text-shadow: rgba(0, 0, 0, 0.514) 1px 1px 1px;
     }
     a:hover,a.active{
         background: none;
@@ -109,18 +113,14 @@ a.active,a:hover{
     }
 }
 /* KONIEC ATRYBUTÓW PASKA MENU */
-/* Tło strony */
-section{
-    background: url(2.png) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-}
+
 /* Stopka */
 footer {
-    position:static;
+    position:absolute;
     bottom: 0px;
     width: 100%;
     background: #292a2b;
+    z-index: 2;
 }
 .stopka {
     width:100%;
@@ -168,3 +168,72 @@ footer {
     color:#1a1a1a;
 }
 /* KONIEC ATRYBUTÓW DOT. STOPKI */
+/* Lista zadań */
+.container {
+    background: rgba(255, 255, 255, 0.534);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #8eb8fa;
+    border-bottom: 5px solid #8eb8fa;
+    display:block;
+    margin: 1em auto;
+    width: 100%;
+    max-width: 800px;
+    min-height: 200px;
+    position: relative;
+    border-radius: 20px;
+    top: 100px;
+}
+.tytul h2{
+    color:white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px 5px black;
+}
+.tytul h2 img{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+.atrybuty{
+    width: 100%;
+    display: flex;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+textarea{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+.button{
+    border: none;
+    outline: none;
+    padding: 16px 10px;
+    background: #ff5945;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+}
