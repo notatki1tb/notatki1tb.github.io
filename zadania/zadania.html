@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania</title>
+    <link rel="stylesheet" href="zadania.css" style type="text/css">
+    <!-- Grafika Znaczka rozwijającego menu -->
+    <script src="https://kit.fontawesome.com/1d74b2e3e3.js" crossorigin="anonymous"></script>
+    <!-- Grafika twittera/youtube/facebook/instagram -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Podstrony -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="logo">CentreBit</label>
+        <ul>
+            <li><a class="active" href="#">Główna</a></li>
+            <li><a href="#">Notatki</a></li>
+            <li><a href="#">Zadania</a></li>
+            <li><a href="#">Zdrowie</a></li>
+            <li><a href="#">Informacje</a></li>
+        </ul>
+    </nav>
+    <!-- Główne body ciała - str główna -->
+    <div class="container">
+        <div class="tytul">
+        <h2><img src="ikonazadanie.png">&raquo; Lista aktywności do zrealizowania</h2>
+        </div>
+        <form action="http://localhost/submit.php" method="post">   
+            <div class="atrybuty">
+            <!--Tekst--><textarea type="text" id="input-box" placeholder="Wpisz swoje zadanie" name="tekst"></textarea><br>
+                <!--Godziny--> <input class="godzina" type="time" name="godzina" placeholder="Wybierz godzinę"><br>
+            <!--Przycisk Wysyłania--> <input class="button" type="submit" value="Prześlij">
+            </div>
+        </form>
+    </div>
+    <!-- Stopka -->
+    <footer>
+    <div class="stopka">
+        <div class="social">
+            <a href="https://www.facebook.com/ekonomikopole"><span class="fab fa-facebook-f"></span></a>
+                <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+                <a href="https://www.instagram.com/ekonomikopole/"><span class="fab fa-instagram"></span></a>
+                <a href="https://www.youtube.com/@ZSEkOpole/featured"><span class="fab fa-youtube"></span></a>
+                <a href="https://www.tiktok.com/@imo__o"><span class="fab fa-tiktok"></span></a>
+        </div>
+    </div>
+        <div class="autorzy">
+           <p>Wojciech Bruchal | Bruno Szewczyk | Sebastian Kuliński</p>
+        </div>
+    <div class="dolnastopka">
+        <p>Designed by <span class="designer">CentreBit</span> | 2023</p>
+    </div>
+    </footer>
+</body>
+</html>
