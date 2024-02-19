@@ -21,55 +21,55 @@
         <ul>
             <li><a class="active" href="../glowna/glowna.html">Główna</a></li>
             <li><a href="../notatki/notatki.html">Notatki</a></li>
-            <li><a href="../zadania/zadania.html">Zadania</a></li>
-            <li><a href="../zdrowie/zdrowie.html">Zdrowie</a></li>
+            <!-- <li><a href="../zadania/zadania.html">Zadania</a></li>
+            <li><a href="../zdrowie/zdrowie.html">Zdrowie</a></li> -->
             <li><a href="../informacje/informacje.html">Sticky Notes</a></li>
         </ul>
     </nav>
     <!-- Body -->
-    <div class="container">
-        <div class="clock">
-            <span id="godz">00</span>
-            <span>:</span>
-            <span id="min">00</span>
-            <span>:</span>
-            <span id="sek">00</span>
-        </div>
-    </div>
-    <script>
+            <div class="container">
+                <div class="clock">
+                    <span id="godz">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sek">00</span>
+                </div>
+            </div>
+            <script>
 
-            let hrs = document.getElementById("godz");
-            let min = document.getElementById("min");
-            let sec = document.getElementById("sek");
+                let hrs = document.getElementById("godz");
+                let min = document.getElementById("min");
+                let sec = document.getElementById("sek");
 
-            setInterval(() => {
-                let currentTime = new Date();
+                setInterval(() => {
+                    let currentTime = new Date();
 
-                hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
-                min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
-                sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
-            }, 1000)
-    </script>
-    <div class="text_container">
-        <h1>Wielka reaktywacja 2024!</h1>
-    </div>
-    <!-- Stopka -->
-    <footer>
-    <div class="stopka">
-        <div class="social">
-            <a href="https://www.facebook.com/ekonomikopole"><span class="fab fa-facebook-f"></span></a>
-                <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
-                <a href="https://www.instagram.com/ekonomikopole/"><span class="fab fa-instagram"></span></a>
-                <a href="https://www.youtube.com/@ZSEkOpole/featured"><span class="fab fa-youtube"></span></a>
-                <a href="https://www.tiktok.com/@imo__o"><span class="fab fa-tiktok"></span></a>
-        </div>
-    </div>
-        <div class="autorzy">
-           <p>Wojciech Bruchal | Bruno Szewczyk | Sebastian Kuliński</p>
-        </div>
-    <div class="dolnastopka">
-        <p>Designed by <span class="designer">CentreBit</span> | 2023-2024</p>
-    </div>
-    </footer>
+                    hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+                    min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+                    sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+                }, 1000)
+            </script>
+            <div class="text_container">
+                <h1>Wielka reaktywacja 2024!</h1>
+            </div>
+            <!-- Stopka -->
+            <footer>
+                <div class="stopka">
+                    <div class="social">
+                        <a href="https://www.facebook.com/ekonomikopole"><span class="fab fa-facebook-f"></span></a>
+                        <a href="https://twitter.com/"><span class="fab fa-twitter"></span></a>
+                        <a href="https://www.instagram.com/ekonomikopole/"><span class="fab fa-instagram"></span></a>
+                        <a href="https://www.youtube.com/@ZSEkOpole/featured"><span class="fab fa-youtube"></span></a>
+                        <a href="https://www.tiktok.com/@imo__o"><span class="fab fa-tiktok"></span></a>
+                    </div>
+                </div>
+                <div class="autorzy">
+                    <p>Wojciech Bruchal | Bruno Szewczyk | Sebastian Kuliński</p>
+                </div>
+                <div class="dolnastopka">
+                    <p>Designed by <span class="designer">CentreBit</span> | 2023-2024</p>
+                </div>
+            </footer>
 </body>
 </html>
