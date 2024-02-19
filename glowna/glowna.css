@@ -6,6 +6,27 @@ font-family: Montserrat;
 src:url(Montserrat-Regular.ttf);
 }
 
+@keyframes colors { /* ~src_guy */
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    90% {
+        color: lawngreen;
+    }
+
+    100% {
+        color: red;
+    }
+}
 
 *{
     padding: 0;
@@ -15,12 +36,26 @@ src:url(Montserrat-Regular.ttf);
     box-sizing: border-box;
     color: white;
 }
-body{
+body {
     font-family: Montserrat;
     background-size: cover;
     height: calc(106vh - 80px);
     background: linear-gradient(45deg, #fc03be, #03b1fc);
 }
+.text_container { /* ~src_guy */
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 2vw;
+}
+    .text_container h1 { /* ~src_guy */
+        animation-iteration-count: infinite;
+        animation-name: colors;
+        animation-duration: 4s;
+    }
 
 /* Tło paska menu */
 nav{

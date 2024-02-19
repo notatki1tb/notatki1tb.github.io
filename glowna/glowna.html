@@ -17,13 +17,13 @@
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
         </label>
-        <label class="logo">WebLife</label>
+        <label class="logo">Notatki1tb</label>
         <ul>
             <li><a class="active" href="../glowna/glowna.html">Główna</a></li>
             <li><a href="../notatki/notatki.html">Notatki</a></li>
             <li><a href="../zadania/zadania.html">Zadania</a></li>
             <li><a href="../zdrowie/zdrowie.html">Zdrowie</a></li>
-            <li><a href="../informacje/informacje.html">Informacje</a></li>
+            <li><a href="../informacje/informacje.html">Sticky Notes</a></li>
         </ul>
     </nav>
     <!-- Body -->
@@ -38,18 +38,21 @@
     </div>
     <script>
 
-        let hrs = document.getElementById("godz");
-        let min = document.getElementById("min");
-        let sec = document.getElementById("sek");
+            let hrs = document.getElementById("godz");
+            let min = document.getElementById("min");
+            let sec = document.getElementById("sek");
 
-        setInterval(()=>{
-            let currentTime = new Date();
+            setInterval(() => {
+                let currentTime = new Date();
 
-            hrs.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours();
-            min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
-            sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
-        }, 1000)
+                hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+                min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+                sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+            }, 1000)
     </script>
+    <div class="text_container">
+        <h1>Wielka reaktywacja 2024!</h1>
+    </div>
     <!-- Stopka -->
     <footer>
     <div class="stopka">
@@ -65,7 +68,7 @@
            <p>Wojciech Bruchal | Bruno Szewczyk | Sebastian Kuliński</p>
         </div>
     <div class="dolnastopka">
-        <p>Designed by <span class="designer">CentreBit</span> | 2023</p>
+        <p>Designed by <span class="designer">CentreBit</span> | 2023-2024</p>
     </div>
     </footer>
 </body>
